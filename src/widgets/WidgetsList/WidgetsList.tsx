@@ -25,9 +25,8 @@ const descItems: any[] = [
     {
         id: 'desc',
         text: 'я профессиональный скуф, обажаю сидеть дома и часто играю в Мафию…',
-        arrow: true,
     },
-    { id: 'tg', text: 'Мой телеграм', subtitle: '@ribakit3', arrow: true },
+    { id: 'tg', text: 'Мой телеграм', subtitle: '@ribakit3' },
 ]
 
 
