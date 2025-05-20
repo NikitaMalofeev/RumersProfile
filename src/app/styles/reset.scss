@@ -1,0 +1,93 @@
+/* reset.scss */
+/* 1. Полная обнулка по Eric Meyer + box-sizing */
+
+/* Обнуляем отступы, границы, шрифты, выравнивание */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Упрощённо для HTML5-элементов в старых браузерах */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Сброс для списков */
+ol, ul {
+  list-style: none;
+}
+
+/* Сброс для цитат */
+blockquote, q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+  content: none;
+}
+
+/* Сброс для таблиц */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 2. Box-sizing по-умолчанию */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 3. Базовые сбросы для элементов */
+body {
+  line-height: 1;
+  background: #fff;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  background: none;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: inherit;
+}

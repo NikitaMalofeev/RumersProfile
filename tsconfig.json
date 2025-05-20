@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "baseUrl": "./src",
+    "paths": {
+      "app/*": ["app/*"],
+      "features/*": ["features/*"],
+      "entities/*": ["entities/*"],
+      "pages/*": ["pages/*"],
+      "shared/*": ["shared/*"],
+      "widgets/*": ["widgets/*"]
+    },
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "strict": true,
+    "noEmit": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": ["src", "public", "src/types/global.d.ts"]
+}
