@@ -1,6 +1,6 @@
 import React, { ButtonHTMLAttributes, memo, ReactNode, useState, useEffect } from 'react';
 import styles from './styles.module.scss';
-import { classNames, Mods } from 'shared/lib/helpers/classNames/classNames';
+import { classNames } from 'shared/lib/helpers/classNames';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
@@ -8,29 +8,23 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     disabled?: boolean;
     children?: ReactNode;
     theme?: ButtonTheme;
-    buttonForm?: ButtonForm;
     onClick?: () => void;
     padding?: string;
 }
 
-export enum ButtonForm {
-    CIRCLE = 'circle',
-}
+export type Mods = Record<string, boolean | string | undefined>
+
 
 export enum ButtonTheme {
-    BLUE = "blue",
-    EMPTYBLUE = 'emptyblue',
-    GREEN = "green",
-    UNDERLINE = "underline",
-    GREENuNDERLINE = 'green__underline'
+    EMPTY = "empty",
+    BORDER = 'border',
 }
 
 export const Button = memo((props: ButtonProps) => {
     const {
         className,
         children,
-        theme = ButtonTheme.BLUE,
-        buttonForm = ButtonForm.CIRCLE,
+        theme = ButtonTheme.EMPTY,
         square = false,
         disabled = false,
         padding,
@@ -59,8 +53,6 @@ export const Button = memo((props: ButtonProps) => {
 
     const mods: Mods = {
         [styles[theme]]: true,
-        [styles[buttonForm]]: true,
-        [styles.pressed]: isPressed,
     };
 
     const buttonClasses = [
