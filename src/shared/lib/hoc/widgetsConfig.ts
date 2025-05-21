@@ -1,6 +1,7 @@
-import React from 'react'
-export interface WidgetConfig {
-    id: string
-    Component: React.FC<any>
-    props?: any
+export interface WidgetConfig<P = any> {
+    id: string;
+    Component: React.ComponentType<P>;
+    props: P;
+    /** Опционально: переопределить класс-обёртку */
+    wrapperClassName?: string;
 }

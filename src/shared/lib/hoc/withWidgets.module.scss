@@ -5,3 +5,10 @@
   gap: 20px;
 }
 .widget {}
+
+.widgetDesc {
+  @extend .widget;              // унаследовать базовый виджет (необязательно)
+
+  background: red;
+
+}

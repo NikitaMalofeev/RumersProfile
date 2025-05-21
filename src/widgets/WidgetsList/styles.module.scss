@@ -1,0 +1,25 @@
+.widgetDesc {
+    
+    
+    & button:nth-child(2) {
+        display: flex;
+        
+        justify-content: space-between;
+        border-top: 1px solid #00000033;
+
+        & div {
+            flex-direction: row;
+            justify-content: space-between;
+
+           span:nth-of-type(2) {
+            font-weight: 590;
+            font-size: 17px;
+            line-height: 22px;
+            letter-spacing: -0.43px;
+            text-align: right;
+            vertical-align: middle;
+            color: #000;
+        }
+        }
+    }
+}

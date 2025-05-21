@@ -9,6 +9,7 @@ import { WidgetConfig } from 'shared/lib/hoc/widgetsConfig'
 import { withWidgets } from 'shared/lib/hoc/withWidgets'
 import { MenuListWidget } from 'features/MenuListWidgets/MenuListWidgets'
 import { Icon } from 'shared/ui/Icon/Icon'
+import styles from './styles.module.scss'
 
 const actionsItems: any[] = [
     { id: 'public', icon: <Icon Svg={EyeIcon} width={35} height={21} />, text: 'Публичный аккаунт' },
@@ -46,7 +47,7 @@ const logoutItems: any[] = [
 const widgets: WidgetConfig[] = [
     { id: 'actions', Component: MenuListWidget, props: { items: actionsItems } },
     { id: 'subs', Component: MenuListWidget, props: { items: subsItems } },
-    { id: 'desc', Component: MenuListWidget, props: { items: descItems } },
+    { id: 'desc', Component: MenuListWidget, props: { items: descItems }, wrapperClassName: styles.widgetDesc, },
     { id: 'links', Component: MenuListWidget, props: { items: linkItems } },
     { id: 'logout', Component: MenuListWidget, props: { items: logoutItems } },
 ]
