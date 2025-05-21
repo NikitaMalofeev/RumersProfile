@@ -11,6 +11,22 @@
   border-bottom: 1px solid #EBEBED;
   background: none;
   border: none;
+  position: relative;
+
+  &:not(:first-child) {
+
+
+    &::after {
+      content: '';
+      width: calc(100% - 32px);
+      left: 16px;
+      top: 0;
+      position: absolute;
+      height: 1px;
+          border-top: 1px solid #00000033;
+
+    }
+  }
 }
 .item:last-child {
   border-bottom: none;
