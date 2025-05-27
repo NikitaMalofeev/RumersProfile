@@ -22,7 +22,7 @@ export const fetchProfileThunk = createAsyncThunk<
     try {
         const body: ShowProfileRequest = {
             meta: {
-                session_id: '"71ba015c-c741-4c71-944a-93d931e5a965',
+                session_id: '71ba015c-c741-4c71-944a-93d931e5a965',
                 cmd: 'show_profile_me',
             },
             data: { nickname: 'damirdamir' },
